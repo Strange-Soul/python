@@ -1,5 +1,4 @@
 # Conditional Execution
-
 hours = input("Enter hours? ")
 hr=float(hours)
 rate=input("Enter the rate per hour? ")
