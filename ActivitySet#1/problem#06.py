@@ -21,36 +21,5 @@ rt = float(input("Enter rate per hour? "))
 p = computepay(hrs, rt)
 print("Pay",p)
 
-# Loops & Iterators
 
-"""
- Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. Once 'done' is entered, print out the largest and smallest of the numbers. If the user enters anything other than a valid number catch it with a try/except and put out an appropriate message and ignore the number. Enter 7, 2, bob, 10, and 4 and match the output below.
-"""
-""""
-largest = None
-smallest = None
-
-while True:
-    num = input("Enter a number? ")
-
-    if num == "done":
-        break
-
-    # ...
-
-    print(num)
-
-print("Maximum", largest)
-"""
-largest=None
-smallest=None
-
-while True:
-  num=input("Enter a number? ")
-  fnum=int(num)
-  print(num)
-  if fnum > None
-   largest=fnum
-print("Largest:",largest)
-  
   
