@@ -6,3 +6,19 @@ Count these lines and extract the floating point values from each of the lines a
 You can download the sample data at http://www.py4e.com/code3/mbox-short.txt when you are testing below enter mbox-short.txt as the file name.
 """
 filename = "dataset/mbox-short.txt"
+#fsample=input("Enter the file-Nmae : ")
+f=open(filename)
+count=0
+total=0
+for line in f:
+  if line.startswith('X-DSPAM-Confidence:'):
+   count=count+1
+   #z=line.strip()
+   x=line.find("0")
+   y=float(line[x:])
+   print(line) 
+   total=total+y
+print("Count:",count ,end=" ")
+print('Total:',total)
+average=total/count
+print("Average : ",average)
