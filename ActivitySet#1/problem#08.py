@@ -18,7 +18,8 @@ for line in f:
    y=float(line[x:])
    print(line) 
    total=total+y
-print("Count:",count ,end=" ")
+print("0 is @:",x)
+print("Count:",count ,end="\n")
 print('Total:',total)
 average=total/count
 print("Average : ",average)
