@@ -5,9 +5,16 @@ You can download the sample data at http://www.py4e.com/code3/romeo.txt
 """
 filename = "dataset/romeo.txt"
 fopen=open(filename)
+lst=list()
 for line in fopen:
-  print(line)
-  x=line.split()
-  print(x)
-for word is not in line:
-  y=word.append(x[:])
+  # line.strip()
+  ele=line.split() 
+  #print(ele)
+  for key in ele:
+    if key not in lst:
+      lst.append(key)
+    else:
+      continue
+print(sorted(lst))
+
+
