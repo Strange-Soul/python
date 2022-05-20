@@ -15,15 +15,27 @@ for line in fhand:
     words=line.split()
     words=words[1]
     sec[words]=sec.get(words,0)+1
-print(words,sec[words]) 
+print(words,sec[words])
 """for line in fhand:
   if line.startswith("From:") or not line.startswith('From'):
     continue
     word=line.split
     lst.append(word[1])
 print(lst)
-for word in sec.items():"""
+for word in lst:
+  sec[word]=word.get(word,0)+1
+
+bigcount=None
+bigword=None
+for k,v in sec.items():
+  if bigcount is None or v>bigcount:
+    bigcount=v
+    bigword=w
+print(bigword,bigcount)"""
   
+  
+
+
    
 
   
