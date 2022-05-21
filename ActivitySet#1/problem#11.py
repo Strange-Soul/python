@@ -29,4 +29,5 @@ for k in lst:
       d[k]=1
     else:
         d[k]+=1
-print(d)
+for time,count in d.items():
+  print(time,count)
