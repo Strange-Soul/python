@@ -1,16 +1,19 @@
 
 
 def get_cs():
-    """get string input"""
+   """get string input"""
+   words=input("Enter the string:")
+   return words
 
-
+lst=list()
 def cs_to_lot(cs):
     """convert connected string to list of strings"""
-
+    for word in words:
+      lst.append(word)
+      return lst
 
 def main():
     cs = get_cs()
-
     lot = cs_to_lot(cs)
     print(lot)
 
