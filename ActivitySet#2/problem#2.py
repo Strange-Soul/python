@@ -6,7 +6,7 @@ def add(a, b):
     return a+b
 
 def output(a, b, sum):
-    print("Addition of {%d} and {%d} is :",a,b,sum)
+    print("Addition of %d + %d is :"%(a,b),sum)
 
 def main():
    

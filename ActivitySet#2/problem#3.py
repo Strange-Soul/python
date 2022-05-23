@@ -5,9 +5,10 @@ def get_cs():
    words=input("Enter the string:")
    return words
 
-lst=list()
+
 def cs_to_lot(cs):
     """convert connected string to list of strings"""
+    lst=list()
     for word in words:
       lst.append(word)
       return lst
