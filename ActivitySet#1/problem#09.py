@@ -13,8 +13,9 @@ for line in fopen:
   for key in ele:
     if key not in lst:
       lst.append(key)
+      lst.sort()
     else:
       continue
-print(sorted(lst))
+print(lst)
 
 
