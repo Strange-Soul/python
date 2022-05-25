@@ -6,10 +6,10 @@ Count these lines and extract the floating point values from each of the lines a
 You can download the sample data at http://www.py4e.com/code3/mbox-short.txt when you are testing below enter mbox-short.txt as the file name.
 """
 filename=input("Enter a filename :")
-fh=open(filename)
+fhandle=open(filename)
 count=0
 total=0
-for line in fh:
+for line in fhandle:
   if line.startswith("X-DSPAM-Confidence:"):
      s=line.split()
      v=float(s[1])
