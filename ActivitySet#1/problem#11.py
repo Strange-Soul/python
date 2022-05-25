@@ -14,20 +14,17 @@ for line in handle:
     if line.startswith("From:"):
          continue
     if line.startswith("From"):
-         l=line.split()
-         t=l[5]
-         
-         ft=t.split(":")
-         lst.append(ft[0])
-         lst.sort() 
-"""for c in lst:
-    d[c]=d.get(c,0)+1
-    print(c,d[c])"""
-         
-for k in lst:
-    if k not in d:
-      d[k]=1
-    else:
-        d[k]+=1
-for time,count in d.items():
-  print(time,count)
+       spt=line.split()
+       ele=spt[5]
+       lst.append(ele[:2])
+       lst.sort()
+for key in lst:
+  if key not in d:
+    d[key]=1
+  else:
+    d[key]+=1
+for k,v in d.items():
+  print(k,v)
+  
+
+
