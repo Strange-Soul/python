@@ -5,6 +5,6 @@
 text = "X-DSPAM-Confidence:    0.8475"
 length=len(text)
 print("Length of String is : ",length)
-print("0.8475 is @: ",text.find('0.8475'))
+print("0.8475 is @: ",text.find('0'))
 slice=text[23:]
 print(slice)
