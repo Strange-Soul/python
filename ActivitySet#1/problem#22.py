@@ -7,7 +7,7 @@ Hint: make sure not to include the lines that start with 'From:'. Also look at t
 
 You can download the sample data at http://www.py4e.com/code3/mbox-short.txt
 """
-filename="dataset/mbox-short.txt"
+"""filename="dataset/mbox-short.txt"
 if len(filename) < 2 :
   filename='mbox-short.txt'
 fopen=open(filename)
@@ -19,4 +19,17 @@ for line in fopen:
     sp=line.split()
     print(sp[1])
     count+=1
-print("There are",count,"lines in the file From as a First Word")
+print("There are",count,"lines in the file From as a First Word")"""
+file_name=input("Enter the filename to open >>")
+f_open=open(file_name)
+if len(file_name)<2:
+  f_open=open("dataset/mbox-short.txt")
+count=0
+for line in f_open:
+  if line.startswith("From:"):
+    continue
+  if line.startswith("From"):
+     spt=line.split()
+     print(spt[1])
+     count=count+1
+print("There are",count,"lines  in the file as the line starts with From at begining")
