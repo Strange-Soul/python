@@ -7,15 +7,15 @@ filename = "dataset/romeo.txt"
 fopen=open(filename)
 lst=list()
 for line in fopen:
-  # line.strip()
-  ele=line.split() 
-  #print(ele)
-  for key in ele:
-    if key not in lst:
-      lst.append(key)
-      lst.sort()
-    else:
-      continue
+   spt_line=line.split()
+   #print(spt_line)
+   for word in spt_line:
+     #print(word)
+     if word not in lst:
+       lst.append(word)
+       lst.sort()
+     else:
+       continue
 print(lst)
 
 
