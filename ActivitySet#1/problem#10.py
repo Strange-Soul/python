@@ -11,18 +11,28 @@ for line in fhandle:
   if line.startswith("From:"):
    continue
   if line.startswith("From"):
-    spt=line.rstrip().split()
-    """spt=line.split()
-    lst.append(spt[1])
-    #print(lst)
-for key in lst:
-  d[key]=d.get(key,0)+1
-for k,v in d.items():
- print(k,v)"""
+    spt=line.split()
     sp=spt[1]
     d[sp]=d.get(sp,0)+1
+    #d[spt[1]]=d.get(spt[1],0)+1
 print(sp,d[sp])
+#print(spt[1],d[spt[1]])
    
+"""file_name=input('Enter the file name to open:')
+fhandle=open(file_name)
+lst=list()
+dt=dict()
+for line in fhandle:
+  if line.startswith("From:"):
+   continue
+  if line.startswith('From'):
+   spt=line.split()
+   lst.append(spt[1])
+for key in lst:
+  dt[key]=dt.get(key,0)+1
+print(dt)
+for key,value in dt.items():
+ print(key,value)"""
 
   
     
