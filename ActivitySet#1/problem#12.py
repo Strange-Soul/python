@@ -1,7 +1,11 @@
 # Regular Expressions
-# https://www.py4e.com/lessons/regex
+#https://www.py4e.com/lessons/regex
+
 import re
-import re
-s = 'A message from csev@umich.edu to cwen@iupui.edu about meeting @2PM'
-lst = re.findall('\S+?@\S+', s)
-print(lst)
+file_name=input("Enter the filename:")
+file_open=open(file_name,"r+")
+for line in file_open:
+  line =line.rstrip()
+  if re.search("",line):
+    print(line)
+  
