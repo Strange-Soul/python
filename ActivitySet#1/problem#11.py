@@ -4,27 +4,25 @@ Write a program to read through the mbox-short.txt and figure out the distributi
 From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
 Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.
 """
-filename = "dataset/mbox-short.txt"
+filename=input("Enter the filename:")
+fopen=open(filename)
+di_ct=dict()
 lst=list()
-d=dict()
-if len(filename) < 1:
-    filename = "mbox-short.txt"
-handle = open(filename)
-for line in handle:
-    if line.startswith("From:"):
-         continue
-    if line.startswith("From"):
-       spt=line.split()
-       ele=spt[5]
-       lst.append(ele[:2])
-       lst.sort()
-for key in lst:
-  if key not in d:
-    d[key]=1
-  else:
-    d[key]+=1
-for k,v in d.items():
+count=0
+for line in fopen:
+  if line.startswith("From:"):
+    continue
+  if line.startswith("From"):
+    line=line.split()
+    time=line[5]
+    hr=time[:2]#[0:2]
+    di_ct[hr]=di_ct.get(hr,0)+1
+lst=list(di_ct.items())
+lst.sort()
+for i in lst:
+  print(i[0],i[1])
+"""for k,v in di_ct.items():
   print(k,v)
-  
+"""
 
 
