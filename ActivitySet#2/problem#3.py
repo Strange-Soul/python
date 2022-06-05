@@ -1,12 +1,13 @@
 
 
-def get_cs():
+def get_str():
    """get string input"""
-   str=input("Enter the string:")
-   return str
+   string=''
+   string=input("Enter the string:")
+   return string
 
 
-def cs_to_lot(cs):
+def str_to_lst(cs):
     """convert connected string to list of strings"""
     lst=list()
     for word in cs:
@@ -14,9 +15,9 @@ def cs_to_lot(cs):
     return lst
 
 def main():
-    cs = get_cs()
-    lot = cs_to_lot(cs)
-    print(lot)
+   name=get_str()
+   list=str_to_lst(name)
+   print(list)
 
 
 if __name__ == '__main__':
