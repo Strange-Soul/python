@@ -3,13 +3,15 @@
 
 import re
 sum=0
-file_name=input("Enter the filename:")
-file_open=open(file_name,"r")
+file_name=input("Enter the filename to open:")
+file_open=open(file_name)
 for line in file_open:
-  line =line.rstrip()
-  #find_num=re.findall("[0-9]+",line)
-  find_num=re.findall('\d+',line)
+  line=line.strip()
+  #find_name=re.findall('\d+',line)
+  find_num=re.findall("[0-9]+",line)
   for num in find_num:
     y=float(num)
-    sum=sum+y
+    sum+=y
 print(sum)
+
+ 
