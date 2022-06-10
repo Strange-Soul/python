@@ -10,5 +10,5 @@ print("0.8475 is @:",find_num)
 x=text.find('5')
 print(x)
 slice=text[23:]
-#print(slice)
+
 print(float(slice))
