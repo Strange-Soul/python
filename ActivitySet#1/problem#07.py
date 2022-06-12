@@ -14,3 +14,5 @@ slice=text[23:]
 print(float(slice))"""
 text="X-DSPAM-Confidence:    0.8475"
 print(len(text))
+print("0.8475 is @ :",text.find('0'))
+print(text[23:])
