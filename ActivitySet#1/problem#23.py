@@ -47,24 +47,19 @@ print('smallest: ',smallest)"""
 largest=None
 smallest=None
 while True:
-  number=input("Enter a Number:")
-  if number=="done":
+  number=input('Enter the number:')
+  if number == 'done':
     break
   try:
     num=float(number)
-    if largest==None:
+    if largest == None or num >largest:
      largest=num
-    if num >largest:
-     largest=num
-    if smallest==None:
-      smallest= num
-    if num < smallest:
+    if smallest == None or num < smallest:
      smallest=num
   except:
-    print("Invalid Number \n Error !!!")
-
-print("Maximum is","{:,}".format(largest))
-print("Minimum is","{:,}".format(smallest))
+    print("Re-enter the number \n Error")
+print('Maximum is :',largest)
+print('Minimum is :',smallest)
     
  
   
