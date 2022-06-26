@@ -1,5 +1,4 @@
 
-
 def get_str():
    """get string input"""
    string=''
@@ -9,8 +8,9 @@ def get_str():
 
 def str_to_lst(cs):
     """convert connected string to list of strings"""
+    split=cs.split()
     lst=list()
-    for word in cs:
+    for word in split:
       lst.append(word)
     return lst
 
