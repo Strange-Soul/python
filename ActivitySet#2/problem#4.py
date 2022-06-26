@@ -1,32 +1,29 @@
 
-def get_cs():
+def get_string():
     """get string input"""
-    string=str(input("Enter the any string:"))
+    string=str(input("Enter the string :"))
     return string
 
-def cs_to_lot(cs):
+def str_to_lst(str):
     """convert connected string to list of strings"""
-    lst=list()
-    for word in cs:
-      lst.append(word)
-    return lst
-
-def lot_to_cs(lot):
+    l=[]  #l=list()
+    for char in str:
+      l.append(char)
+    return l
+  
+def lst_to_str(lst):
     """convert list of strings to connected string"""
-    str_word=''
-    for word in lot:
-      str_word+=word
-    return str_word
+    str=''
+    for i in lst:
+      str+=i
+    return str
 
 def main():
-    cs=get_cs()
-
-    lot=cs_to_lot(cs)  # convert connect string to list of tuples
-    print(lot)
-
-    cs=lot_to_cs(lot)  # convert list of strings to connect string
-    print(cs)
-
+    name=get_string()
+    list=str_to_lst(name)
+    string=lst_to_str(list)
+    print(list)
+    print(string)
 
 if __name__ == '__main__':
     main()
