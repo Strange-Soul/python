@@ -14,7 +14,7 @@ def str_to_dict(str):
 
 def dict_to_str(d):
   """convert a dictionary to connect string"""
-  s=''
+  s=str()
   for key in d.keys():
     s+=key
   return s
