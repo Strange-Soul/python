@@ -17,7 +17,7 @@ def lst_to_str(lst):
     for i in lst:
       str+=i
     return str
-
+print(f"Present Directory/__name__ == {__name__}")
 def main():
     name=get_string()
     list=str_to_lst(name)
