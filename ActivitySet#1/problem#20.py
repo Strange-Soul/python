@@ -1,3 +1,4 @@
 import re
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
+from urllib.request import urlope
+n
