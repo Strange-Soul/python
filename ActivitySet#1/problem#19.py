@@ -1,18 +1,18 @@
-import xml.etree.ElementTree as ET
-from urllib.request import urlopen
-#url=input("Enter the Location :")
-data=" http://py4e-data.dr-chuck.net/comments_1545938.xml"
-print("Retrieving "+ 'http://py4e-data.dr-chuck.net/comments_1545938.xml')
-xml=urlopen(data)
-xml=xml.read()
-print("Retrived: "+str(len(xml))+'Character')
+import urllib.request, json
 
-tree=ET.fromstring(xml)
-counts=tree.findall('.//count')
-print("Count: "+str(len(counts)))
+address = input('Enter location: ')
+print('Retrieving', address)
+with urllib.request.urlopen(address) as url:
+    raw = json.loads(url.read().decode())
 
-n=0
-for count in counts:
-    n+=int(count.text)
-
-print("Sum :"+str(n))
+print('Retrieved', len(str(raw)), 'characters')
+data = raw.get("comments")
+#print(data)
+num = total = 0
+for i in range(len(data)):
+    tmp = data[i]
+    value = tmp.get("count")
+    num = num + 1
+    total = total + int(value)
+print("Count:",num)
+print("Sum:",total)
