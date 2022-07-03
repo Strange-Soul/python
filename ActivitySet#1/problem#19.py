@@ -1,16 +1,18 @@
 import xml.etree.ElementTree as ET
-from bs4 import BeautifulSoup
-import requests
-import re
+from urllib.request import urlopen
 #url=input("Enter the Location :")
-url="http://py4e-data.dr-chuck.net/comments_1545938.xml"
-html=requests.get(url).content
-soup=BeautifulSoup(html,'html.parser')
-#print(soup.prettify())
+data=" http://py4e-data.dr-chuck.net/comments_1545938.xml"
+print("Retrieving "+ 'http://py4e-data.dr-chuck.net/comments_1545938.xml')
+xml=urlopen(data)
+xml=xml.read()
+print("Retrived: "+str(len(xml))+'Character')
 
-#tree=ET.fromstring(soup)
-#print(tree)
-number=soup('count')
-num=re.findall('\d+', number)
-for n in num:
-    print(n)
+tree=ET.fromstring(xml)
+counts=tree.findall('.//count')
+print("Count: "+str(len(counts)))
+
+n=0
+for count in counts:
+    n+=int(count.text)
+
+print("Sum :"+str(n))
