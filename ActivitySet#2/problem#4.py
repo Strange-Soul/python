@@ -1,4 +1,3 @@
-
 def get_string():
     """get string input"""
     string=str(input("Enter the string :"))
