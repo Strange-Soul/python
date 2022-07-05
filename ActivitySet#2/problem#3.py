@@ -10,8 +10,12 @@ def str_to_lst(cs):
     """convert connected string to list of strings"""
     split=cs.split(';')
     lst=list()
+    if '' in split:
+      split.remove('')
     for word in split:
-      lst.append(word)
+      wrd=word.split('=')
+      t=tuple(wrd)
+      lst.append(t)
     return lst
 
 def main():
