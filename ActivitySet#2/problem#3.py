@@ -8,7 +8,7 @@ def get_str():
 
 def str_to_lst(cs):
     """convert connected string to list of strings"""
-    split=cs.split()
+    split=cs.split(';')
     lst=list()
     for word in split:
       lst.append(word)
@@ -21,4 +21,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+ main()
