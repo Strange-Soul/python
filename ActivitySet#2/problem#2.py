@@ -9,11 +9,12 @@ def output(a, b, sum):
     print("Addition of %d + %d is :"%(a,b),sum)
 
 def main():
-   
+    a= int(input_two_numbers())
+    b=int(input_two_numbers())
     sum = add(a, b)
     output(a, b, sum)
 
-a= int(input_two_numbers())
-b=int(input_two_numbers())
+
+
 if __name__ == '__main__':
   main()
