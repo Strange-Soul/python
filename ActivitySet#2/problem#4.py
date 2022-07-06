@@ -6,16 +6,30 @@ def get_string():
 def str_to_lst(str):
     """convert connected string to list of strings"""
     l=[]  #l=list()
-    for char in str:
-      l.append(char)
+    spt=str.split(';')
+    '''if '' in spt:
+      spt.remove('')'''
+    for wrd in spt:
+      wrd=wrd.split('=')
+      t=tuple(wrd)
+      l.append(t)
+      #print(len(l))
     return l
   
 def lst_to_str(lst):
     """convert list of strings to connected string"""
-    str=''
+    '''str=''
     for i in lst:
       str+=i
+    return str'''
+    str=""
+    l=[]
+    for wrd in lst:
+      l.append(wrd)
+    for i in l: 
+      str+=i[0]+'='+i[1]+';'
     return str
+  
 print(f"Present Directory/__name__ == {__name__}")
 def main():
     name=get_string()
