@@ -22,6 +22,7 @@ def lst_to_str(lst):
     for i in lst:
       str+=i
     return str'''
+  
     str=""
     l=[]
     for wrd in lst:
