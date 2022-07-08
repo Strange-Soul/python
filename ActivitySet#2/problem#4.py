@@ -27,8 +27,10 @@ def lst_to_str(lst):
     l=[]
     for wrd in lst:
       l.append(wrd)
-    for i in l: 
+    for i in l:
+      #print(i[0],i[1],i[-2])
       str+=i[0]+'='+i[1]+';'
+   
     return str
   
 print(f"Present Directory/__name__ == {__name__}")
@@ -41,3 +43,13 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+'''for t in lot:
+        if t == lot[(len(lot)-1)]:
+            a = a+t[0]+'='+t[1]
+            continue
+        a = a+t[0]+'='+t[1]+';'
+    return a'''
+
+
