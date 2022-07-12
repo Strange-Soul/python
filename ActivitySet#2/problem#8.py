@@ -7,10 +7,12 @@ class Menu:
     print(f"You set {item} ={rate} ")
     self.__dict__[item]=rate
   
-m = Menu('Idly',56)
+m = Menu('_',0)
 print(f"Item = {m.item} rate={m.rate}")
+m.idly=10
 m.vada=20
 m.dosa=30
 print("\033[1m Printing Menu in Dictionary Type \033[0m")
-print(m.__dict__)
+for k,v in m.__dict__.items():
+ print(k,v)
 
