@@ -1,7 +1,8 @@
-
 class Menu(dict):
   """fill in class definition here"""
-    
+  def __init__(item,rate):
+    self.item=item
+    self.rate=rate
 
 class Order:
   """fill in class definition here"""

@@ -1,4 +1,5 @@
-print("\033[1m Menu List \033[0m")
+print(" Menu List ".center(40,'*'))
+print('_'*34)
 class Menu():
   """fill in class definition here"""
   def __init__(self,item,rate):
@@ -6,7 +7,7 @@ class Menu():
     self.rate=rate
 
   def show(self):
-    print(f" Item is :\033[1m '{self.item}' \033[0m,rate = \033[1m '{ self.rate}' \033[0m ")
+    print(f" Item is :'{self.item}' ,rate = '{ self.rate}'  ")
 
 idly=Menu("Idly",'20')
 vada=Menu("Vada",'10')
