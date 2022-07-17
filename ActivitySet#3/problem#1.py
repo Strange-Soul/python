@@ -18,9 +18,10 @@ Resultant output
 Area of rectangle with vertices (0.0,0.0),(0.0,1.0),(1.0,0.0) is 1.0
 Area of rectangle with vertices (-1.0,2.0),(3.0,5.0),(1.0,1.0) is 10.0
 Area of rectangle with vertices (5.0,9.0),(-0.5,0.0),(7.5,5.0) is 44.5 """
-def input():
- n=input("Enter the number:")
- return n
-n=input()
-print(n)
-)
+'''def input():
+ n=float(input('Enter the Points of coordinate'))
+ return n'''
+
+def main():
+  x1,x2,x3,y1,y2,y3=(input("Enter the point:").split())
+main()
