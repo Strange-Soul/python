@@ -1,4 +1,4 @@
-class Menu(dict):
+'''class Menu(dict):
   """fill in class definition here"""
   def __init__(item,rate):
     self.item=item
@@ -26,3 +26,20 @@ except KeyError as e:
 
 b = Bill(m, o)
 print(b)
+'''
+class Menu(dict):
+  def __init__(self):
+    self=dict()
+
+  def add(self,item,price):
+    self[item]=price
+
+  def show(self):
+    for i,j in self.items():
+        print(i,j)
+
+
+m = Menu()
+m.add('idly', 10)
+m.add('vada', 20)
+m.show()

@@ -1,21 +1,29 @@
 print(" Menu List ".center(40,'*'))
 print('_'*34)
-class Menu():
+print('Item'+'->'+'Rate')
+class Menu(dict):
   """fill in class definition here"""
-  def __init__(self,item,rate):
-    self.item=item
-    self.rate=rate
-
+  def __init__(self):
+    self=dict()
+    '''  self.item=item
+    self.rate=rate'''
+  def add(self,item,rate):
+    self[item]=rate
+    
   def show(self):
-    print(f" Item is :'{self.item}' ,rate = '{ self.rate}'  ")
+    for i,j in self.items():
+     print(i,'->',j)
 
-idly=Menu("Idly",'20')
-vada=Menu("Vada",'10')
-dosa=Menu("Dosa",'25')
-poori=Menu("Poori",'30')
+m=Menu()
+m.add("Idly",20)
+m.add("Vada",10)
+m.add("Dosa",25)
+m.add("Poori",30)
 
-poori.show()
+m.show()
+'''poori.show()
 idly.show()
 vada.show()
 dosa.show()
 
+'''
