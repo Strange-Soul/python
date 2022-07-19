@@ -22,6 +22,11 @@ Area of rectangle with vertices (5.0,9.0),(-0.5,0.0),(7.5,5.0) is 44.5 """
  n=float(input('Enter the Points of coordinate'))
  return n'''
 
-def main():
-  x1,x2,x3,y1,y2,y3=(input("Enter the point:").split())
-main()
+n=int(input("Enter the number of points:"))
+def input():
+ x1,x2,x3,y1,y2,y3=float(input("Enter the point ::").split(',')
+ print(x1,x2,x3,y1,y2,y3)
+input()
+  
+    
+ 

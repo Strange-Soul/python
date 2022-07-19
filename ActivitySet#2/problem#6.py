@@ -1,7 +1,7 @@
 print(" Menu List ".center(40,'*'))
 print('_'*34)
 print('Item'+'->'+'Rate')
-class Menu(dict):
+class Menu():
   """fill in class definition here"""
   def __init__(self):
     self=dict()
