@@ -18,15 +18,18 @@ Resultant output
 Area of rectangle with vertices (0.0,0.0),(0.0,1.0),(1.0,0.0) is 1.0
 Area of rectangle with vertices (-1.0,2.0),(3.0,5.0),(1.0,1.0) is 10.0
 Area of rectangle with vertices (5.0,9.0),(-0.5,0.0),(7.5,5.0) is 44.5 """
-'''def input():
- n=float(input('Enter the Points of coordinate'))
- return n'''
+import math
 
-n=int(input("Enter the number of points:"))
-def input():
- x1,x2,x3,y1,y2,y3=float(input("Enter the point ::").split(',')
- print(x1,x2,x3,y1,y2,y3)
-input()
-  
+def distance(x,X,y,Y):
+  dist=math.sqrt( ((X-x)**2) - ((Y-y)**2))
+  return dist
+def main():
+ x1,x2,x3,y1,y2,y3=input("x1:"),input("x2:"),input("x3:"),input("y1:"),input("y2:"),input("y3:")
+ x1,x2,x3=float(x1),float(x2),float(x3)
+ y1,y2,y3=float(y1),float(y2),float(y3)
+
+ print("Area of rectangle with vertices(%.2f,%.2f),(%.2f,%.2f),(%.2f,%.2f) is " %(x1,y1,x2,y2),distance(x1,x2,y1,y2))
+ print("Area of rectangle with vertices(%.2f,%.2f),(%.2f,%.2f),(%.2f,%.2f)is "%(x2,y2,x3,y3),distance(x2,x3,y2,y3))
+ print("Area of rectangle with vertices(%.2f,%.2f),(%.2f,%.2f),(%.2f,%.2f) is "%(x3,y3,x1,y1),distance(x3,x1,y3,y1))
     
- 
+main()
