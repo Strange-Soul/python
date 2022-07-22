@@ -39,7 +39,7 @@ if choice =='y':
    print(str(i)+'.'+k,'->',v)
 else:
    exit()
-print("Accepting your Order".center(50,'>'))
+print("Accepting your Order and Printing Ur Bill".center(50,'>'))
 
 o = Order(m)
 try:
@@ -47,9 +47,8 @@ try:
     o["pongal"] = 2
 except KeyError as e:
     print(e)
-for k,v in o.item():
- print(f"U selected {v}->{k} ")
-
+b=Bill(m,o)
+print(b)
 
 
 
