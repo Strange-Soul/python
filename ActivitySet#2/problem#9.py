@@ -1,9 +1,7 @@
 class Menu(dict):
   """fill in class definition here"""
-  def __init__(self):
-    pass
-  def dict(self,item,rate):
-    self[item]=rate
+  def __str__(self):
+    return "\n".join("".join(k,str(v)) for k,v in self.items())
 
 class Order():
   """fill in class definition here"""
@@ -17,7 +15,7 @@ class Order():
 class Bill:
   """fill in class definition here"""
   def __init__(self,item,order):
-    self.bill=sum(v*self.item[k] for k,v in order.orders.items())
+    self.bill=sum(v*item[k] for k,v in order.orders.items())
   def __str__(self):
     return f"{self.bill} rupees"
 
