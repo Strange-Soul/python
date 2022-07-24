@@ -19,9 +19,9 @@ class Rectangle(point):
     self.dist=0
   def cal_dist(self):
     
-    self.dist1=math.sqrt((pt.x[1]-pt.x[0])**2-(pt.y[1]-pt.y[0])**2)
-    self.dist2=math.sqt((pt.x[2]-pt.x[1])**2-(pt.y[2]-pt.y[1])**2)
-    self.dist3=math.sqrt((pt.x[2]-pt.x[0])**2-(pt.y[2]-pt.y[0])**2)
+    self.dist1=((pt.x[1]-pt.x[0])**2+(pt.y[1]-pt.y[0])**2)*0.5
+    self.dist2=((pt.x[2]-pt.x[1])**2+(pt.y[2]-pt.y[1])**2)*0.5
+    self.dist3=((pt.x[2]-pt.x[0])**2+(pt.y[2]-pt.y[0])**2)*0.5
     print('Dis-1:',self.dist1,'Dist-2:',self.dist2,'Dist3:',self.dist3)
   def __gt__(self):
     if self.dist1> self.dist2  & self.dist1>self.dist3:
