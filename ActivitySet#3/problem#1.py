@@ -4,9 +4,11 @@ class point:
     self.x=[]
     self.y=[]
   def __setitem__(self):
+    N=int(input("Enter the Number of Rectangles:"))
     n=int(input("Enter the Number of co-ordinates: "))
-   
-    for i in range(1,n+1):
+    for i in range(N):
+     print("Enter the Detailes of %d  Rectangle"%(i))
+     for i in range(1,n+1):
        x=float(input(f"Enter the {i}'x'co-ordinate:"))
        y=float(input(f"Enter the {i} 'y' co-ordinate:"))
        self.x.append(x)
